@@ -11,6 +11,9 @@ class Button{
     
     if(mouseX >= location.x && mouseX <= location.x + 80 && mouseY >= location.y && mouseY <= location.y + 40){
       fill(147);
+      if(mousePressed){
+        background(0);
+      }
     }
   }
 }
