@@ -17,3 +17,9 @@ void draw(){
     startButton.show();
   }
 }
+
+void keyPressed(){
+  if(key == 'u'){
+    isClicked = false;
+  }
+}
