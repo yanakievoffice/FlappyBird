@@ -1,4 +1,4 @@
-Button startButton; // jhkjkjh
+Button startButton;
 Boolean isClicked = false;
 
 void setup(){
