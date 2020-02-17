@@ -1,12 +1,15 @@
 class Button{
   
   PVector location;
-  Button(int x, int y){
+  PVector size;
+  
+  Button(int x, int y, int width, int height){
     location = new PVector(x, y);
+    size = new PVector(width, height);
   }
   
   void show(){
-    rect(location.x, location.y, 80, 40);
+    rect(location.x, location.y, size.x, size.y);
     fill(127);
     
     if(overButton()){
@@ -15,7 +18,7 @@ class Button{
   }
   
   Boolean overButton(){
-    if(mouseX >= location.x && mouseX <= location.x + 80 && mouseY >= location.y && mouseY <= location.y + 40){
+    if(mouseX >= location.x && mouseX <= location.x + size.x && mouseY >= location.y && mouseY <= location.y + size.y){
       return true;
     }
     return false;
