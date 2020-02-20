@@ -9,12 +9,13 @@ class Button{
   }
   
   void show(){
-    rect(location.x, location.y, size.x, size.y);
     fill(127);
     
     if(overButton()){
       fill(147);
     }
+    
+    rect(location.x, location.y, size.x, size.y);
   }
   
   Boolean overButton(){
