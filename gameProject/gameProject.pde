@@ -14,6 +14,7 @@ void draw(){
   }
   
   if(!isClicked){
+    background(#4BAFFF);
     startButton.show();
   }
 }
