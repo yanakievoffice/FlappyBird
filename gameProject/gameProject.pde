@@ -3,6 +3,7 @@ PImage heroKamen;
 PImage heroAya;
 PImage heroZor;
 PImage heroStinkySocks;
+PImage character;
 Boolean isClicked = false;
 Boolean isUndone = false;
 
@@ -24,6 +25,23 @@ void draw(){
     if(i.clickedButton()){
       background(0);
       isClicked = true;
+      if(characters[0].clickedButton()){
+          character = heroKamen;
+        }
+        
+        else if(characters[1].clickedButton()){
+          character = heroZor;
+        }
+        
+        else if(characters[2].clickedButton()){
+          character = heroAya;
+        }
+        
+        else if(characters[3].clickedButton()){
+          character = heroStinkySocks;
+        }
+        
+        image(character, 125, 275, 80, 80);
     }
     
     if(!isClicked){
@@ -37,6 +55,7 @@ void draw(){
         background(#4BAFFF);
         isUndone = false;
       }
+     
     }
   }
 }
