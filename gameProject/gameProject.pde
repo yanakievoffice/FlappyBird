@@ -1,4 +1,6 @@
 Button[] characters = new Button[4];
+Button start = new Button(250, 200, 300, 60);
+Button exit = new Button(250, 400, 300, 60);
 PImage heroKamen;
 PImage heroAya;
 PImage heroZor;
@@ -6,6 +8,7 @@ PImage heroStinkySocks;
 PImage character;
 Boolean isClicked = false;
 Boolean isUndone = false;
+Boolean startGame = false;
 
 void setup(){
   size(800, 600);
@@ -23,7 +26,7 @@ void draw(){
   
   for(Button i: characters){
     if(i.clickedButton()){
-      background(0);
+      background(#4bafff);
       isClicked = true;
       if(characters[0].clickedButton()){
           character = heroKamen;
@@ -40,8 +43,6 @@ void draw(){
         else if(characters[3].clickedButton()){
           character = heroStinkySocks;
         }
-        
-        image(character, 125, 275, 80, 80);
     }
     
     if(!isClicked){
@@ -57,6 +58,19 @@ void draw(){
       }
      
     }
+  }
+  
+  if(isClicked){
+    start.show();
+    exit.show();
+  }
+  
+  if(start.clickedButton()){
+    startGame = true;
+  }
+  
+  else if(exit.clickedButton()){
+    exit();
   }
 }
 
