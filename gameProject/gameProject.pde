@@ -63,6 +63,7 @@ void draw(){
   if(isClicked){
     start.show();
     exit.show();
+    text("Start", 300, 250);
   }
   
   if(start.clickedButton()){
@@ -71,6 +72,10 @@ void draw(){
   
   else if(exit.clickedButton()){
     exit();
+  }
+  
+  if(startGame){
+    background(#AAAAAA);
   }
 }
 
